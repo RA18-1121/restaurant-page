@@ -13,13 +13,13 @@ class Contact
         const textContainer = document.createElement("div");
 
         const address = document.createElement("p");
-        address.textContent = "Some Number, Some Street, Some City";
+        address.textContent = "Address: Some Number, Some Street, Some City";
 
         const phone = document.createElement("p");
-        phone.textContent = "XXX...10X's";
+        phone.textContent = "Phone: XXX...10X's";
 
         const email = document.createElement("p");
-        email.textContent = "SomeName@SomeDomain";
+        email.textContent = "Email: SomeName@SomeDomain";
 
         textContainer.append(address, phone, email);
         content.append(heading, textContainer);
