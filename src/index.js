@@ -3,11 +3,23 @@ import {Home} from "./home-load";
 import {Contact} from "./contact-load";
 import {Menu} from "./menu-load"
 
-const home = new Home();
-home.HomeLoad();
+class SelectTab
+{
+    constructor()
+    {
+        const homeButton = document.querySelector("#homeButton");
+        const menuButton = document.querySelector("#menuButton");
+        const contactButton = document.querySelector("#contactButton");
+        const home = new Home();
+        const menu = new Menu();
+        const contact = new Contact();
 
-/*const contact = new Contact();
-contact.ContactLoad();*/
+        homeButton.addEventListener("click", () =>  home.HomeLoad())
+        menuButton.addEventListener("click", () =>  menu.MenuLoad())
+        contactButton.addEventListener("click", () =>   contact.ContactLoad())
 
-/*const menu = new Menu();
-menu.MenuLoad();*/
+        home.HomeLoad();
+    }
+}
+
+const selector = new SelectTab();
